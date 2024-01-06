@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title> E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+  <header class="d-flex">
+    <div class="d-flex">
+      <img onclick="showMenu()" class="mobile" src="images\icon-menu.svg" alt="">
+      <img class="logo" src="images\logo.svg" alt="">
+      
+<div class="main-parent-contnet">
+  <div class="navbar none">
+    <img onclick="closeMenu()" class="mobile close-menu" src="images\icon-close.svg" alt="">
+  <div class="parent-content">
+    <ul class="d-flex desktop" id="navbar">
+      <li>
+        Collections
+      </li>
+      <li>
+        Men
+      </li>
+      <li>
+        Women
+      </li>
+      <li>
+        About
+      </li>
+      <li>
+        Contact
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+    </div>
+    <div>
+      <img id="cart" class="cart" src="images\icon-cart.svg" alt="">
+      <img class="avtar" src="images\image-avatar.png" alt="">
+    </div>
+  </header>
+  <main class="d-flex">
+    <div>
+      <div class="d-flex">
+        <img onclick="prev()" class="prev mobile" src="images\icon-previous.svg" alt="">
+        <img id="product-img" class="product-img" src="images\image-product-1.jpg" alt="">
+        <img onclick="next()" class="next mobile" src="images\icon-next.svg" alt="">
+      </div>
+      <div class="thumbnail-img-box">
+        <img class="thumbnail-img" src="images\image-product-1-thumbnail.jpg" alt="">
+        <img class="thumbnail-img" src="images\image-product-2-thumbnail.jpg" alt="">
+        <img class="thumbnail-img" src="images\image-product-3-thumbnail.jpg" alt="">
+        <img class="thumbnail-img" src="images\image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </div>
+    <div class="about-company">
+      <span>
+        Sneaker Company
+      </span>
+      <h3>
+        Fall Limited Edition <br> Sneakers
+      </h3>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="all-price">
+        <div class="price-box">
+          <h6>
+            $125.00
+          </h6>
+          <span>
+            50%
+          </span>
+        </div>
+        <p class="old-price">
+          $250.00
+        </p>
+      </div>
+      <div class="d-flex buttons">
+        <div class="counter">
+          <p id="decrease">
+            <span>
+              -
+            </span>
+          </p>
+          <p id="val">
+            0
+          </p>
+          <p id="increase">
+            <span>
+              +
+            </span>
+          </p>
+        </div>
+        <button id="addtocart">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <div id="empty-cart-box" class="cart-box d-none">
+    <div id="cart-box">
+      <h6>
+        Cart
+      </h6>
+      <div class="empty-text">
+        <p>
+          Your cart is empty
+        </p>
+      </div>
+    </div>
+    <div id="filled-cart-box" class="d-none">
+      <h6>
+        Cart
+      </h6>
+      <hr>
+      <div class="d-flex">
+        <img class="cart-img" src="./images/image-product-1.jpg" alt="">
+        <div>
+          <div class="d-flex">
+            <div class="about-and-value">
+              <p class="para">
+                Fall Limited Edition
+                Sneakers
+              </p>
+              <div class="dynamic-value">
+                <p> $125.00 </p>
+                <p>x</p>
+                <p id="value"> 0 </p>
+                <p id="pricecount"> 0 </p>
+              </div>
+            </div>
+            <img onclick="deleteCart()" class="delete" src="./images/icon-delete.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <button class="btn">
+        Checkout
+      </button>
+    </div>
+    <!---
+   <div>
+    <hr>
+    <div class="d-flex">
+      <img class="cart-img" src="images\image-product-1-thumbnail.jpg" alt="">
+      <div>
+        <p>
+          Fall Limited Edition
+          Sneakers
+        </p>
+        <div class="d-flex">
+          <div class="dynamic-value">
+            <p> 125$.00 </p>
+            <p>x</p>
+            <p id="value"> 0 </p>
+            <p id="pricecount"> 0 </p>
+          </div>
+          <img class="delete" src="images\icon-delete.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <button class="btn">
+      <p>Checkout</p>
+    </button>
+  </div>
+-->
+  </div>
+
+  <div is="modal" class="modal d-none">
+    <div>
+      <img id="close" class="close-img" src="images\icon-close.svg" alt="">
+      <div class="d-flex">
+        <img onclick="prev()" class="prev" src="images\icon-previous.svg" alt="">
+        <div class="product-img-box">
+          <img id="product" class="product" src="images\image-product-1.jpg" alt="">
+        </div>
+        <img class="next" onclick="prev()" src="images\icon-next.svg" alt="">
+      </div>
+    </div>
+    <div>
+      <img class="thumbnail" src="images\image-product-1-thumbnail.jpg" alt="">
+      <img class="thumbnail" src="images\image-product-2-thumbnail.jpg" alt="">
+      <img class="thumbnail" src="images\image-product-3-thumbnail.jpg" alt="">
+      <img class="thumbnail" src="images\image-product-4-thumbnail.jpg" alt="">
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
